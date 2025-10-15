@@ -7,7 +7,7 @@ from langchain_core.runnables import RunnableSequence
 
 
 class AnswerGrader(BaseModel):
-    binary_score: str = Field(description="Answer addresses the question 'yes' or 'no'")
+    binary_score: bool = Field(description="Answer addresses the question 'yes' or 'no'")
 
 
 llm = ChatOpenAI(temperature=0)

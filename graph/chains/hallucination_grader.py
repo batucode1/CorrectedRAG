@@ -9,7 +9,7 @@ llm = ChatOpenAI(temperature=0)
 
 class GraderHallucinations(BaseModel):
     """Binary search for hallucination present in generated answer """
-    binary_scope: str = Field(description="Answer is grounded in the facts, 'yes' or 'no'")
+    binary_scope: bool = Field(description="Answer is grounded in the facts, 'yes' or 'no'")
 
 
 structured_llm_grader = llm.with_structured_output(GraderHallucinations)
