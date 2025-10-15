@@ -11,7 +11,7 @@ class AnswerGrader(BaseModel):
 
 
 llm = ChatOpenAI(temperature=0)
-structed_llm_grader = llm.structed_llm_grader(AnswerGrader)
+structed_llm_grader = llm.with_structured_output(AnswerGrader)
 system_prompt = """
 You are a grader assessing whether an answer addresses / resolves a question \n 
      Give a binary score 'yes' or 'no'. Yes' means that the answer resolves the question."""

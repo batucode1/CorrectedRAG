@@ -1,5 +1,6 @@
 from graph.chains.generation import generation_chain
 from typing import Dict, Any
+from graph.state import GraphState
 
 
 def generate(state: GraphState) -> Dict[str, Any]:
@@ -8,4 +9,4 @@ def generate(state: GraphState) -> Dict[str, Any]:
     generation = generation_chain.invoke(
         {"context": "documents", "question": "question"}
     )
-    return
+    return {"documents": documents, "question": question, "generation": generation}
