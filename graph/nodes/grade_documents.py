@@ -15,7 +15,7 @@ def grade_documents(state: GraphState) -> Dict[str, Any]:
     question = state["question"]
     documents = state["documents"]
     filtered_documents = []
-    web_search = false
+    web_search = False
     for d in documents:
         score = retrival_grader.invoke(
             {"question": question, "document": d.page_content}
