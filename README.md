@@ -97,3 +97,7 @@ Bu düğümler arasında veri akışı aşağıdaki sırayla gerçekleşir:
 
 Tüm bu akış `graph.py` ve `state.py` dosyaları üzerinden yönetilir.
 
+## Geliştirici
+
+**Batuhan Koç**
+
